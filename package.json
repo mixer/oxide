@@ -1,0 +1,25 @@
+{
+  "name": "oxide",
+  "version": "1.0.0",
+  "description": "Oxide is a Node.js client responsible for communicating with Graphite's Carbon.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttaylorr/oxide"
+  },
+  "keywords": [
+    "graphite",
+    "carbon",
+    "data",
+    "client"
+  ],
+  "author": "Taylor Blau",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ttaylorr/oxide/issues"
+  },
+  "homepage": "https://github.com/ttaylorr/oxide"
+}
