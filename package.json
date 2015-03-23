@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/ttaylorr/oxide/issues"
   },
-  "homepage": "https://github.com/ttaylorr/oxide"
+  "homepage": "https://github.com/ttaylorr/oxide",
+  "dependencies": {
+    "lodash": "^3.5.0"
+  }
 }
