@@ -1,3 +1,4 @@
 module.exports = {
-  Client: require('./lib/oxide_client.js')
+  Client: require('./lib/oxide_client.js'),
+  Metric: require('./lib/metric.js')
 }
