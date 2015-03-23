@@ -20,4 +20,9 @@ describe("Oxide.Client", function () {
 
     expect(client).to.not.have.property('randomProperty');
   });
+
+  it('returns a socket with #connect', function () {
+    var client = new Oxide.Client();
+    expect(client.connect()).to.not.be(null);
+  })
 });
