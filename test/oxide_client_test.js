@@ -24,6 +24,7 @@ describe("Oxide.Client", function () {
 
   it('prefixes metrics if a specified prefix exists', function () {
     var client = new Oxide.Client({ prefix: 'my_prefix' });
+    client.connect();
     client.record('foo', 'bar');
 
     expect(client.queue[0].path).to.be('my_prefix.foo');
@@ -34,10 +35,16 @@ describe("Oxide.Client", function () {
     expect(client.connect()).to.not.be(null);
   });
 
-  it('stores enqueued items in its queue', function () {
+  it('only stores items in its queue if connected', function () {
     var client = new Oxide.Client();
     var metric = new Oxide.Metric({path: 'foo', value: 'bar'});
 
+    // It doesn't store items that are pushed while not connected
+    client.enqueue(metric);
+    expect(client.queue).to.be.empty();
+
+    // It does store items that are pushed while the client is connected
+    client.connect();
     client.enqueue(metric);
 
     expect(client.queue).to.contain(metric);
