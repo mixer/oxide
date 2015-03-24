@@ -3,9 +3,9 @@ var Oxide = require('../index.js'),
     sinon = require('sinon'),
     helpers = require('./test_helper.js');
 
-describe("Oxide.CarbonClient", function () {
+describe("Oxide.Client.CarbonClient", function () {
   it('correctly enqueues metrics in the base carbon format', function () {
-    var client = new Oxide.CarbonClient();
+    var client = new Oxide.Client.CarbonClient();
 
     helpers.freeze(function (now) {
       client.connect();
