@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ttaylorr/oxide"
+    "url": "https://github.com/MCProHosting/oxide"
   },
   "keywords": [
     "graphite",
@@ -19,9 +19,9 @@
   "author": "Taylor Blau",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ttaylorr/oxide/issues"
+    "url": "https://github.com/MCProHosting/oxide/issues"
   },
-  "homepage": "https://github.com/ttaylorr/oxide",
+  "homepage": "https://github.com/MCProHosting/oxide",
   "dependencies": {
     "expect.js": "^0.3.1",
     "lodash": "^3.5.0",
