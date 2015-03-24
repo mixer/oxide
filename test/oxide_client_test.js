@@ -16,7 +16,7 @@ describe("Oxide.Client", function () {
     expect(client).to.have.property('port', Oxide.Client.defaults.port);
   });
 
-  it('discads values that aren\'t in the default values', function () {
+  it('discards values that aren\'t in the default values', function () {
     var client = new Oxide.Client({ randomProperty: 'randomValue' });
 
     expect(client).to.not.have.property('randomProperty');
