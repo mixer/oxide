@@ -2,7 +2,7 @@ var Oxide = require('../index.js'),
     expect = require('expect.js'),
     helper = require('./test_helper.js')
 
-describe("Oxide.Metrics.Statsd.Gauge", function () {
+describe("Oxide.Metrics.Statsd.Counter", function () {
   it("has the metric type 'c'", function () {
     expect(new Oxide.Metrics.Statsd.Counter()).to.have.property('type', 'c');
     expect(new Oxide.Metrics.Statsd.Counter({}, 'k')).to.have.property('type', 'c');
