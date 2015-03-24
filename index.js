@@ -2,7 +2,7 @@ module.exports = {
   Client: {
     AbstractClient: require('./lib/clients/oxide_client.js'),
     CarbonClient: require('./lib/clients/carbon_client.js'),
-    // StatsdClient: require('./lib/clients/statsd_client.js')
+    StatsdClient: require('./lib/clients/statsd_client.js')
   },
   Metrics: {
     CarbonMetric: require('./lib/metrics/metric.js'),
