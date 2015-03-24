@@ -22,14 +22,6 @@ describe("Oxide.Client", function () {
     expect(client).to.not.have.property('randomProperty');
   });
 
-  it('prefixes metrics if a specified prefix exists', function () {
-    var client = new Oxide.Client({ prefix: 'my_prefix' });
-    client.connect();
-    client.record('foo', 'bar');
-
-    expect(client.queue[0].path).to.be('my_prefix.foo');
-  })
-
   it('returns a socket with #connect', function () {
     var client = new Oxide.Client();
     expect(client.connect()).to.not.be(null);
@@ -37,7 +29,7 @@ describe("Oxide.Client", function () {
 
   it('only stores items in its queue if connected', function () {
     var client = new Oxide.Client();
-    var metric = new Oxide.Metric({path: 'foo', value: 'bar'});
+    var metric = new Oxide.Metrics.CarbonMetric({path: 'foo', value: 'bar'});
 
     // It doesn't store items that are pushed while not connected
     client.enqueue(metric);
@@ -75,8 +67,8 @@ describe("Oxide.Client", function () {
 
     var pickle = Oxide.Protocol.Pickle();
 
-    var m1 = new Oxide.Metric({path: 'foo', value: 'bar'});
-    var m2 = new Oxide.Metric({path: 'foo', value: 'bar'});
+    var m1 = new Oxide.Metrics.CarbonMetric({path: 'foo', value: 'bar'});
+    var m2 = new Oxide.Metrics.CarbonMetric({path: 'foo', value: 'bar'});
 
     it('removes items from the queue upon sending', function () {
       var client = new Oxide.Client();
