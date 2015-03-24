@@ -9,7 +9,7 @@ module.exports = {
       Counter: require('./lib/metrics/statsd/counter.js'),
       Timer: require('./lib/metrics/statsd/timer.js'),
       Histogram: require('./lib/metrics/statsd/timer.js'),
-      // Meter: require('./lib/metrics/statsd/meter.js')
+      Meter: require('./lib/metrics/statsd/meter.js')
     }
   },
   Protocol: {

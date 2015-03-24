@@ -2,18 +2,13 @@ var Oxide = require('../index.js'),
     expect = require('expect.js'),
     helper = require('./test_helper.js')
 
-describe("Oxide.Metric", function () {
-  it('obeys the given arguments', function () {
-    var metric = new Oxide.Metrics.CarbonMetric({path: 'test', value: 'foo'})
-
-    expect(metric).to.have.property('path', 'test');
-    expect(metric).to.have.property('value', 'foo');
+describe("Oxide.Metrics.Statsd.Meter", function () {
+  it("has the metric type 'm'", function () {
+    expect(new Oxide.Metrics.Statsd.Meter()).to.have.property('type', 'm');
+    expect(new Oxide.Metrics.Statsd.Meter({}, 'k')).to.have.property('type', 'm');
   });
 
-  it('sets the time as current when no time is provided', function () {
-    helper.freeze(function (now) {
-      var metric = new Oxide.Metrics.CarbonMetric({path: 'test', value: 'foo'});
-      expect(metric.timestamp).to.eql(now);
-    });
+  it("formats itself correctly", function () {
+    expect(new Oxide.Metrics.Statsd.Meter({path: 'users_online', value: 127}).format()).to.be('users_online:127|m');
   });
 });
