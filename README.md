@@ -36,7 +36,6 @@ var Oxide = require('oxide.js');
  *   prefix: prefixes all paths with the given value (i.e., foo -> prefix.foo)
  *   interval: the time in msec to send statistics
  *   protocol: an instance of the protocol to send statistics with
- *   type: the socket type for communicating with carbon
  */
 var oxideClient = new Oxide({
   host: '127.0.0.1',
