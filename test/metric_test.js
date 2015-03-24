@@ -16,18 +16,4 @@ describe("Oxide.Metric", function () {
       expect(metric.timestamp).to.eql(now);
     });
   });
-
-  it('correctly outputs metric data in the plaintext format', function () {
-    helper.freeze(function (now) {
-      var metric = new Oxide.Metric({path: 'foo', value: 'bar'});
-      expect(metric.asPlaintext()).to.eql('foo bar ' + Math.floor(now / 1000));
-    });
-  });
-
-  it('correctly outputs metric data using the pickle protocol', function () {
-    helper.freeze(function (now) {
-      var metric = new Oxide.Metric({path: 'foo', value: 'bar'});
-      expect(metric.asPickle()).to.eql('('+metric.path+', ('+(now / 1000 | 0)+', '+metric.value+'))')
-    });
-  });
 });
