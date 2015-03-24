@@ -22,6 +22,13 @@ describe("Oxide.Client", function () {
     expect(client).to.not.have.property('randomProperty');
   });
 
+  it('prefixes metrics if a specified prefix exists', function () {
+    var client = new Oxide.Client({ prefix: 'my_prefix' });
+    client.record('foo', 'bar');
+
+    expect(client.queue[0].path).to.be('my_prefix.foo');
+  })
+
   it('returns a socket with #connect', function () {
     var client = new Oxide.Client();
     expect(client.connect()).to.not.be(null);

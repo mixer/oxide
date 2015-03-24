@@ -33,6 +33,7 @@ var Oxide = require('oxide.js');
  * The following options are supported:
  *   host: the hostname of your carbon server
  *   port: the port your carbon server runs on
+ *   prefix: prefixes all paths with the given value (i.e., foo -> prefix.foo)
  *   interval: the time in msec to send statistics
  *   protocol: an instance of the protocol to send statistics with
  *   type: the socket type for communicating with carbon
