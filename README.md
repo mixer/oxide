@@ -52,6 +52,7 @@ To write a metric into Oxide's aggregate queue, simply fire off the `#record` me
  *   1) path - the path to write the metric to
  *   2) value - the value to write onto the metric
  *   3) [optional] timestamp - the time to record the metric
+ */
 oxideClient.record('my.path', 50, new Date());
 ```
 
