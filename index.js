@@ -8,11 +8,11 @@ module.exports = {
     CarbonMetric: require('./lib/metrics/metric.js'),
     Statsd: {
       AbstractMetric: require('./lib/metrics/statsd/abstract_statsd_metric.js'),
-      Gauge: require('./lib/metrics/statsd/gauge.js'),
-      Counter: require('./lib/metrics/statsd/counter.js'),
-      Timer: require('./lib/metrics/statsd/timer.js'),
-      Histogram: require('./lib/metrics/statsd/timer.js'),
-      Meter: require('./lib/metrics/statsd/meter.js')
+      Gauge: require('./lib/metrics/statsd/gauge_metric.js'),
+      Counter: require('./lib/metrics/statsd/counter_metric.js'),
+      Timer: require('./lib/metrics/statsd/timer_metric.js'),
+      Histogram: require('./lib/metrics/statsd/timer_metric.js'),
+      Meter: require('./lib/metrics/statsd/meter_metric.js')
     }
   },
   Protocol: {
