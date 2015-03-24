@@ -36,6 +36,17 @@ describe("Oxide.Client", function () {
     expect(client.queue).to.contain(metric);
   });
 
+  it('calls #send at an interval', function (done) {
+    var client = new Oxide.Client({interval: 1});
+    sinon.spy(client, 'send');
+
+    client.start();
+    setTimeout(function () {
+      expect(client.send).to.have.property('called', true);
+      done();
+    }, client.interval);
+  });
+
   describe("#send", function () {
     before(function () {
       // Before this group of tests start, stub the _writeToSocket method
