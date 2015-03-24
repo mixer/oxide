@@ -1,6 +1,6 @@
 {
   "name": "oxide.js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Oxide is a Node.js client responsible for communicating with Graphite's Carbon.",
   "main": "index.js",
   "scripts": {
