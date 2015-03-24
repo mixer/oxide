@@ -24,5 +24,5 @@ describe("Oxide.Client", function () {
   it('returns a socket with #connect', function () {
     var client = new Oxide.Client();
     expect(client.connect()).to.not.be(null);
-  })
+  });
 });
