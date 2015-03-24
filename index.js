@@ -4,6 +4,7 @@ module.exports = {
   Metrics: {
     CarbonMetric: require('./lib/metrics/metric.js'),
     Statsd: {
+      AbstractMetric: require('./lib/metrics/statsd/abstract_statsd_metric.js')
       // Gauge: require('./lib/metrics/statsd/gauge.js'),
       // Counter: require('./lib/metrics/statsd/counter.js'),
       // Timer: require('./lib/metrics/statsd/timer.js'),
