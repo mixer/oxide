@@ -57,7 +57,7 @@ describe("Oxide.Client", function () {
     before(function () {
       // Before this group of tests start, stub the _writeToSocket method
       // to just call the callback
-      sinon.stub(Oxide.Client.prototype, "_writeToSocket").callsArg(2);
+      sinon.stub(Oxide.Client.prototype, "_writeToSocket").callsArg(1);
     });
 
     after(function () {
