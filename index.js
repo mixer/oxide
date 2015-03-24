@@ -7,7 +7,7 @@ module.exports = {
       AbstractMetric: require('./lib/metrics/statsd/abstract_statsd_metric.js'),
       Gauge: require('./lib/metrics/statsd/gauge.js'),
       Counter: require('./lib/metrics/statsd/counter.js'),
-      // Timer: require('./lib/metrics/statsd/timer.js'),
+      Timer: require('./lib/metrics/statsd/timer.js'),
       // Histogram: require('./lib/metrics/statsd/histogram.js'),
       // Meter: require('./lib/metrics/statsd/meter.js')
     }
