@@ -6,8 +6,7 @@ describe("Oxide.Metrics.Statsd.AbstractMetric", function () {
     var metric = new Oxide.Metrics.Statsd.AbstractMetric({
       path: 'foo',
       value: 12,
-      type: 'm'
-    });
+    }, 'm');
 
     expect(metric).to.have.property('path', 'foo');
     expect(metric).to.have.property('value', 12);
@@ -19,15 +18,12 @@ describe("Oxide.Metrics.Statsd.AbstractMetric", function () {
     var metric = new Oxide.Metrics.Statsd.AbstractMetric({
       path: 'foo',
       value: 12,
-      type: 'm'
-    });
+    }, 'm');
 
     expect(metric).to.not.have.property('unknown_property');
   });
 
   it('throws an error for metric types longer than one character', function () {
-    expect(Oxide.Metrics.Statsd.AbstractMetric).withArgs({
-      type: 'long_metric'
-    }).to.throwException();
+    expect(Oxide.Metrics.Statsd.AbstractMetric).withArgs({}, 'long_metric').to.throwException();
   });
 });
