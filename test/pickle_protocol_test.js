@@ -5,8 +5,8 @@ var Oxide = require('../index.js'),
 describe("Oxide.Protocol.Pickle", function () {
   var pickle = new Oxide.Protocol.Pickle();
   var metrics = [
-                  new Oxide.Metric({path: 'foo', value: 'bar'}),
-                  new Oxide.Metric({path: 'baz', value: 'donk'})
+                  new Oxide.Metrics.CarbonMetric({path: 'foo', value: 'bar'}),
+                  new Oxide.Metrics.CarbonMetric({path: 'baz', value: 'donk'})
                 ];
 
   it('exists', function () {
@@ -15,7 +15,7 @@ describe("Oxide.Protocol.Pickle", function () {
 
   it('correctly transforms a single metric', function () {
     helpers.freeze(function (now) {
-      var metric = new Oxide.Metric({path: 'foo', value: 'bar'});
+      var metric = new Oxide.Metrics.CarbonMetric({path: 'foo', value: 'bar'});
       var formattedDate = now / 1000 | 0;
 
       expect(pickle.transform(metric)).to.eql('(foo, ('+formattedDate+', bar))')
