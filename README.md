@@ -48,13 +48,13 @@ var oxideClient = new Oxide.Client.CarbonClient({
 
 To write a metric into Oxide's aggregate queue, simply fire off the `#record` method:
 
+```js
 // Connect to the server
 oxideClient.connect();
 
 // Start the queuing operations
 oxideClient.start();
 
-```js
 /**
  * #record takes three arguments, as described below:
  *   1) path - the path to write the metric to
