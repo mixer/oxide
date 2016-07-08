@@ -1,4 +1,4 @@
-# oxide.js [![Build Status](https://travis-ci.org/WatchBeam/oxide.svg)](https://travis-ci.org/MCProHosting/oxide)
+# oxide.js [![Build Status](https://travis-ci.org/WatchBeam/oxide.svg)](https://travis-ci.org/WatchBeam/oxide)
 
 Oxide is a Node.js client designed for easy communicating with [Carbon](https://github.com/graphite-project/carbon), a data injest tool which is a part of the Graphite project.  Oxide also works well with [Statsd](https://github.com/etsy/statsd), a fantastic little tool from the folks at Etsy designed for more powerful metrics recording.
 
