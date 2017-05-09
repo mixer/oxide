@@ -69,7 +69,7 @@ A call to `#record` makes a `new Oxide.Metric` and dumps it in the queue.  After
 The Statsd client is more interesting, since statsd supports more metric types.  All protocols described in [this spec](https://github.com/b/statsd_spec) are implemented by the client using a different method call.  Examples follow below:
 
 ```js
-var client = new Oxide.Client.StastdClient({ /* opts */ });
+var client = new Oxide.Client.StatsdClient({ /* opts */ });
 client.connect();
 client.start();
 
